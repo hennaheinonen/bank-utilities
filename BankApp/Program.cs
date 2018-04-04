@@ -35,33 +35,18 @@ namespace BankApp
             {
                 PrintBalance(bank,cust);
             }
-
-
-            //bank.AddTransactionForCustomer(customers[0].AccountNumber,new Transaction(1234, new DateTime(2018, 03, 23)));
-            //PrintBalance(bank, customers[0]);
-            //PrintBalance(bank, customers[1]);
-            //PrintBalance(bank, customers[2]);
-
+           
             var endTime = DateTime.Today;
             var time = new TimeSpan(24 * 30 * 6, 0, 0);
             var startTime = endTime.Date - time;
             Console.WriteLine($"Tilitapahtuma viimeisen kuuden kuukauden ajalta: {startTime.ToShortDateString()}" +
                                $"{endTime.ToShortDateString()} ");
-
-
-            //PrintTransactions(bank.GetTransactionsForCustomerForTimeSpan(customers[0].AccountNumber,startTime, endTime), customers[0]);
-
+            
             foreach (var cust in customers) 
             {
                 PrintTransactions(bank.GetTransactionsForCustomerForTimeSpan(cust.AccountNumber,startTime, endTime), cust);
                 Console.WriteLine();
             }
-
-			//Console.WriteLine("<Enter> lopettaa!");
-
-			// bank.AddTransactionForCustomer(customers[0].AccountNumber, new Transaction(1234, new DateTime(2018, 03, 23)));
-			//  PrintBalance(bank,customers[0]);
-			//  Console.WriteLine("<Enter> lopettaa!");
 
 		}
         public static void PrintBalance(Bank bank, Customer customer)

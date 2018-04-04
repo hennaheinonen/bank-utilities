@@ -19,7 +19,6 @@ namespace BankApp
             get { return _accountNumber; }
             set { _accountNumber = value; }
         }
-     
 
         public Account(string accountNumber, double balance, List<Transaction> transaction) 
         {
@@ -27,6 +26,7 @@ namespace BankApp
             Balance = balance;
             _transactions = transaction;
         }
+
         public bool AddTransaction(Transaction transaction) 
         {
             bool res = false;

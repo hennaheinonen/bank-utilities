@@ -12,14 +12,8 @@ namespace BankApp
             AccountNumber = accountNumber;
             FirstName = firstName;
             LastName = lastName;
-
         }
-        //public string AccountNumber
-      //  {
-        //    get { return AccountNumber; }
-          //  set { AccountNumber = value; }
-       // }
-
+       
         public override string ToString()
         {
             return $"{FirstName} {LastName}\t{AccountNumber}";
